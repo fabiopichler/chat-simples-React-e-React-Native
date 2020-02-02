@@ -1,0 +1,23 @@
+{
+  "name": "tele-grama",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "app-modules",
+      "app-mobile",
+      "app-web",
+      "server"
+    ],
+    "nohoist": [
+      "app-mobile/**"
+    ]
+  },
+  "scripts": {
+    "serve": "yarn workspace server run serve",
+    "web": "yarn workspace app-web run start",
+    "mobile": "yarn workspace app-mobile run start",
+    "android": "yarn workspace app-mobile run android"
+  }
+}
